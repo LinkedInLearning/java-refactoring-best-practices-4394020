@@ -7,7 +7,12 @@ import java.util.List;
 public class ExampleRefactoring {
     public static void main(String[] args) {
         List<String> names = new ArrayList<>(Arrays.asList("Bobby", "Suki", "Wiesje"));
-        names.forEach(s -> System.out.println(s));
+        names.forEach(new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                System.out.println(s);
+            }
+        });
     }
 
 }
