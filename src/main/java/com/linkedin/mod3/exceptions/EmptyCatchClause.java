@@ -5,8 +5,6 @@ public class EmptyCatchClause {
         try {
             // code that may cause an exception
         } catch (Exception e) {
-            // At least log the exception and its message
-            System.err.println("Exception occurred: " + e.getMessage());
         }
 
     }
